@@ -1,7 +1,10 @@
 #include <stdio.h>
 
 /**
- * 4-puts.c - prints something
+ * main - prints something
+ * Description - Prints the exact string that was asked
+ * Return: The retrun value is 0
+ *
  */
 
 int main(void)

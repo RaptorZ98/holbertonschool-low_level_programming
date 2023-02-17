@@ -1,7 +1,11 @@
 #include <stdio.h>
+
+/**
+ * 4-puts.c - prints something
+ */
+
 int main(void)
 {
-	/* programm that writes something*/
 	int puts("\"Programming is like building a multilingual puzzle");
 	return (0);
 }

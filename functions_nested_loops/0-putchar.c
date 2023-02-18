@@ -1,11 +1,11 @@
-#include "_putchar.c"
+#include "main.h"
 /**
  * main - prints putchar
  * Description: prints _putchar uising _putchar
  * Return: the correct return is 0
 */
 
-int perro(void)
+int main(void)
 {
 	char c[] = {'_', 'p', 'u', 't', 'c', 'h', 'a', 'r', '\n'};
 	int n = 0;

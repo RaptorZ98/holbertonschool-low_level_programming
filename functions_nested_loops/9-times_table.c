@@ -18,20 +18,26 @@ void times_table(void)
 		while (m <= 9)
 		{
 			r = m * n;
-			if (r < 10)
+			else if (r < 10)
 			{
 				_putchar('0' + r);
-				_putchar(',');
-				_putchar(' ');
-				_putchar(' ');
+				if (m < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+					_putchar(' ');
+				}
 				m++;
 			}
 			else
 			{
 				_putchar('0' + (r / 10));
 				_putchar('0' + (r % 10));
-				_putchar(',');
-				_putchar(' ');
+				if (m < 9)
+				{
+					_putchar(',');
+					_putchar(' ');
+				}
 				m++;
 			}
 		}

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main -prints the alphabet
+ * print_alphabet -prints the alphabet
  *
  * Return: the correct return is 0
 */
@@ -13,4 +13,3 @@ void print_alphabet(void)
 		_putchar(c);
 	_putchar('\n');
 }
-

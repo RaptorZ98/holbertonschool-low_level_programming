@@ -18,10 +18,10 @@ void times_table(void)
 		while (m <= 9)
 		{
 			r = m * r;
-			putchar('0' + r);
-			putchar(',');
-			putchar(' ');
-			puthcar(' ');
+			_putchar('0' + r);
+			_putchar(',');
+			_putchar(' ');
+			_puthcar(' ');
 			m++
 		}
 		n++

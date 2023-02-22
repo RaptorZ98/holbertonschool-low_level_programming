@@ -6,7 +6,7 @@
  * Return: void
  */
 
-void main(void)
+int main(void)
 {
 	int n;
 	int fuz;
@@ -33,4 +33,5 @@ void main(void)
 			printf("%d ", n);
 		}
 	}
+	return (0);
 }

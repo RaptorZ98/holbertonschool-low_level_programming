@@ -26,7 +26,7 @@ int main(void)
 		}
 		else if (buz == 0)
 		{
-			printf("Buzz");
+			printf("Buzz ");
 		}
 		else
 		{

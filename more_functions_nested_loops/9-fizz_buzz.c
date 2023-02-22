@@ -18,11 +18,11 @@ void main(void)
 		buz = n % 5;
 		if (fuz == 0 && buz == 0)
 		{
-			prtinf("FizzBuzz ");
+			printf("FizzBuzz ");
 		}
 		else if (fuz == 0)
 		{
-			pritnf("Fizz ");
+			printf("Fizz ");
 		}
 		else if (buz == 0)
 		{

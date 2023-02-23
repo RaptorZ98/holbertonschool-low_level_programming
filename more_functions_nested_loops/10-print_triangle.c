@@ -12,13 +12,13 @@ void print_triangle(int size)
 	int b;
 	int c;
 
-	if (n > 0)
+	if (size > 0)
 	{
-		for (a = n; a > 1; a--)
+		for (a = size; a > 1; a--)
 		{
 			for (b = 1; b <= a; b++)
 				_putchar(' ');
-			for (c = n; c >= a; c--)
+			for (c = size; c >= a; c--)
 				_putchar('#');
 			_putchar('\n');
 		}

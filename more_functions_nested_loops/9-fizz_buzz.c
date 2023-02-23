@@ -12,7 +12,7 @@ int main(void)
 	int fuz;
 	int buz;
 
-	for (n = 1; n <= 100; n++)
+	for (n = 1; n <= 99; n++)
 	{
 		fuz = n % 3;
 		buz = n % 5;
@@ -33,6 +33,6 @@ int main(void)
 			printf("%d ", n);
 		}
 	}
-	printf("\n");
+	printf("Fizz Buzz\n");
 	return (0);
 }

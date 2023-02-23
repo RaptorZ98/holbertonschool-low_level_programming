@@ -2,4 +2,4 @@ CC = gcc
 SRC = %.c
 
 all:
-	cc SRC -o school
+	CC ${SRC} -o school

@@ -19,10 +19,10 @@ void rev_string(char *s)
 	}
 	char z[a];
 	d = a;
-	for (a = a - 1; a >= 0; a--)
+	for (a  a - 1; a >= 0; a--)
 	{
 		*(z + b) = *(s + a); 
-		b++;
+	i	b++;
 	}
 	for (c = 0; c < d; c++)
 	{

@@ -8,5 +8,10 @@
 
 int _atoi(char *s)
 {
+	int i;
 
+	while(i == 0)
+	{
+
+	}
 }

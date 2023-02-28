@@ -16,9 +16,10 @@ void print_array(int *a, int n)
 	{
 		if (b == n - 1)
 		{
-			printf("%d\n", *(a + b));
+			printf("%d", *(a + b));
 		}
 		else
 			printf("%d, ", *(a + b));
 	}
+	_putchar('\n');
 }

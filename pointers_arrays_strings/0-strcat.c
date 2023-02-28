@@ -21,6 +21,6 @@ char *_strcat(char *dest, char *src)
 		n++;
 	}
 	n++;
-	*(dest + n) = *(src + b)
+	*(dest + n) = *(src + b);
 	return (dest); 
 }

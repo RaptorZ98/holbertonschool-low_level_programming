@@ -5,6 +5,7 @@
  * @dest: parameter 1
  * @src: parameter 2
  * @n: parameter 3
+ * Return: char
  */
 
 char *_strncpy(char *dest, char *src, int n)

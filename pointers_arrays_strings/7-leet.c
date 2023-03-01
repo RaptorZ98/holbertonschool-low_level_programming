@@ -18,7 +18,7 @@ char *leet(char *m)
 	while (*(m + n) != '\0')
 	{
 		for (d = 0; d < 5; d++)
-			if (*(m + n) == *(a + d) || *(m + n) == (*(m + n) - 32))
+			if (*(m + n) == *(a + d) || *(m + n) == (*(a + d) - 32))
 				*(m + n) = *(b + d);
 		n++;
 	}

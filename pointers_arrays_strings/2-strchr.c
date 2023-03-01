@@ -11,13 +11,21 @@
 char *_strchr(char *s, char c)
 {
 	int i;
+	int d;
 
 	i = 0;
-	while (*(s + i) != '\0')
+	d = 0;
+	while (i == 0)
 	{
-		if (*(s + i) == c)
-			return ((s + 4 * i));
-		i++;
+		if (s[d] != '\0' && s[d] != c)
+			d++;
+		else if (s[d] == '\0')
+			i = 1;
+		else if (s[d] == c)
+			i = 2;
 	}
-	return ('\0');
+	if (i == 2)
+		return ((s + 4 * (d + 1)));
+	if (i == 1)
+		return ('\0');
 }

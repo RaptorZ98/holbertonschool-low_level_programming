@@ -20,6 +20,6 @@ void reverse_array(int *a, int n)
 		b = *(a + d);
 		*(a + d) = *(a + (p - 1));
 		*(a + (p - 1)) = b;
-		p--;
+		p = p - 1;
 	}
 }

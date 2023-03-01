@@ -14,9 +14,7 @@ char *string_toupper(char *n)
 	while (*(n + p) != '\0')
 	{
 		if (*(n + p) >= 'a' && *(n + p) <+ 'z')
-		{
-			*(n + p) = *(n + p) - 32;
-		}
+			*(n + p) -= 32;
 		p++;
 	}
 }

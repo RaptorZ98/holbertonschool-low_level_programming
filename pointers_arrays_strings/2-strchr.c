@@ -20,10 +20,10 @@ char *_strchr(char *s, char c)
 	{
 		if ((*(s + d) != '\0') && (*(s + d) != c))
 			d++;
-		else if (*(s + d) == '\0')
-			i = 1;
 		else if (*(s + d) == c)
 			i = 2;
+		else if (*(s + d) == '\0')
+			i = 1;
 	}
 	if (i == 2)
 		return (&(*(s + d)));

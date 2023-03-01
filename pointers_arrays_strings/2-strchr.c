@@ -25,7 +25,7 @@ char *_strchr(char *s, char c)
 			i = 2;
 	}
 	if (i == 2)
-		return ((s + 4 * (d + 1)));
+		return (&(s[d]));
 	else
 		return ('\0');
 }

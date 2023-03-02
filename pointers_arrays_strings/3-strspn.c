@@ -18,7 +18,7 @@ unsigned int _strspn(char *s, char *accept)
 	while (*(s + n) != '\0')
 	{
 		for (d = 0; *(accept + d) != '\0'; d++)
-			if (*(s + n) == (*(accept + d))
+			if (*(s + n) == (*(accept + d)))
 					r++;
 		n++;
 	}

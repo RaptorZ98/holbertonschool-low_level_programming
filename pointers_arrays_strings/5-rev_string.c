@@ -11,11 +11,11 @@ void rev_string(char *s)
 	int i;
 	int m;
 	int k;
-	
+
 	i = 0;
 	while (s[i] != '\0')
 		i++;
-	for (m = 0; m <= i / 2; m++)
+	for (m = 0; m < i / 2; m++)
 	{
 		k = s[m];
 		s[m] = s[(i - m - 1)];

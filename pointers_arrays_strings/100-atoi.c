@@ -27,7 +27,7 @@ int _atoi(char *s)
 			while (s[c] >= '1' && s[c] <= '9')
 			{
 				d = d * 10;
-				d = d + (s[c] - '0');
+				d = d + (s[c] - 48);
 				c++;
 			}
 		}

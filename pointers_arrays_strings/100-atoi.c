@@ -19,9 +19,11 @@ int _atoi(char *s)
 		if (s[c] == '-')
 			i = c * -1;
 		else if (s[c] >= 48 && s[c] <= 57)
+		{
 			d = s[c] - '0';
 			d = i * d;
 			return (d);
+		}
 		c++;
 	}
 	return (0);

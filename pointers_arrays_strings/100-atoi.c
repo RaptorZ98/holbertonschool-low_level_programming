@@ -16,6 +16,7 @@ int _atoi(char *s)
 	i = 1;
 	c = 0;
 	d = 0;
+	t = 1;
 	while (t == 1)
 	{
 		if (s[c] == '\0')

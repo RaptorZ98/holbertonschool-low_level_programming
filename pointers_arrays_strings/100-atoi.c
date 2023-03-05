@@ -17,7 +17,7 @@ int _atoi(char *s)
 	while (s[c])
 	{
 		if (s[c] == '-')
-			i = c * -1;
+			i = i * -1;
 		else if (s[c] >= 48 && s[c] <= 57)
 		{
 			d = s[c] - '0';

@@ -23,9 +23,9 @@ int _atoi(char *s)
 			t = 0;
 		else if (s[c] == '-')
 			i *= -1;
-		else if ((s[c] >= '1') && (s[c] <= '9'))
+		else if ((s[c] >= '0') && (s[c] <= '9'))
 		{
-			while ((s[c] >= '1') && (s[c] <= '9'))
+			while ((s[c] >= '0') && (s[c] <= '9'))
 			{
 				if (i == 1)
 				{

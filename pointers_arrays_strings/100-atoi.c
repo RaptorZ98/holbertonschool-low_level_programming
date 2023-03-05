@@ -29,12 +29,12 @@ int _atoi(char *s)
 				if (i == 1)
 				{
 					d *= 10;
-					d += (s[c] - 48);
+					d += (s[c] - '0');
 				}
 				else
 				{
 					d *= 10;
-					d -= (s[c] -48);
+					d -= (s[c] - '0');
 				}
 				c++;
 			}
@@ -42,5 +42,5 @@ int _atoi(char *s)
 		}
 		c++;
 	}
-	return ((d * i));
+	return (d);
 }

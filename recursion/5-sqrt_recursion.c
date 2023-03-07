@@ -22,8 +22,8 @@ int _nsqare(int n, int m)
 {
 	if (m * m == n)
 		return (m);
-	else if (m < b / 2)
-		return (_nsqare(n, (b + 1)));
+	else if (m < n / 2)
+		return (_nsqare(n, (m + 1)));
 	else
 		return (-1);
 }

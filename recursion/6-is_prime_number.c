@@ -13,7 +13,7 @@ int is_prime_number(int n)
 	else if (n == 2)
 		return (1);
 	else
-		return ((prime_checker(n, n)));
+		return ((prime_checker(n, 2)));
 }
 
 /**

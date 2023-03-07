@@ -28,7 +28,7 @@ int prime_checker(int n, int m)
 	if (n % m == 0)
 		return (0);
 	else if (m < n)
-		prime_checker(n, (m + 1));
+		return (prime_checker(n, (m + 1)));
 	else
 		return (1);
 }

@@ -18,6 +18,12 @@ int _sqrt_recursion(int n)
 		return (_nsqare(n, 2));
 }
 
+/**
+ * _nsqare - auxiliar function
+ * @n: parameter 1
+ * Return: int
+ */
+
 int _nsqare(int n, int m)
 {
 	if (m * m == n)

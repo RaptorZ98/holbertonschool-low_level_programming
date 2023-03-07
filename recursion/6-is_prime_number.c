@@ -8,10 +8,12 @@
 
 int is_prime_number(int n)
 {
-	if (prime_checker(n, n) == 1)
+	if (n <= 1)
+		return (0);
+	else if (n == 2)
 		return (1);
 	else
-		return (0);
+		return ((prime_checker(n, n)));
 }
 
 /**
@@ -24,9 +26,9 @@ int is_prime_number(int n)
 int prime_checker(int n, int m)
 {
 	if (n % m == 0)
-		return (1);
+		return (0);
 	else if (m < n)
 		prime_checker(n, (m + 1));
 	else
-		return (-1);
+		return (1);
 }

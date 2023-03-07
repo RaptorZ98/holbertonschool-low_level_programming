@@ -21,6 +21,7 @@ int _sqrt_recursion(int n)
 /**
  * _nsqare - auxiliar function
  * @n: parameter 1
+ * @m: parameter 2
  * Return: int
  */
 

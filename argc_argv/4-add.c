@@ -19,7 +19,7 @@ int main(int argc, char **argv)
 	r = 0;
 	if (argc < 1)
 		printf("0\n");
-	for(m = 1; m < argc; m++)
+	for (m = 1; m < argc; m++)
 		for (i = 0; argv[m][i] != '\0'; i++)
 		{
 			if (argv[m][i] >= '0' && argv[m][i] <= '9')

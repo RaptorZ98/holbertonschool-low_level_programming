@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main - adds positive numbers
@@ -22,6 +23,8 @@ int main(int argc, char **argv)
 		for (i = 0; argv[m][i] != '\0'; i++)
 		{
 			if (argv[m][i] >= '0' && argv[m][i] <= '9')
+			{
+			}
 			else
 			{
 				printf("Error\n");

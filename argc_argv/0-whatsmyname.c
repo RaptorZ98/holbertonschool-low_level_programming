@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * main - prints program name 
+ * main - prints program name
  * @argc: parameter 1
  * @argv: parameter 2
  * Return: void

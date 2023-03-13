@@ -36,11 +36,12 @@ char *str_concat(char *s1, char *s2)
 		s[d] = s1[d];
 		d++;
 	}
-	while (i <= m)
+	while (i < m)
 	{
 		s[d] = s2[i];
 		i++;
 		d++;
 	}
+	s[d] = '\0';
 	return (s);
 }

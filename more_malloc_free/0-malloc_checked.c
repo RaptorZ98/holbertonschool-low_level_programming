@@ -1,10 +1,11 @@
 #include "main.h"
 #include <stdio.h>
-#include <stdlib>
+#include <stdlib.h>
 
 /**
- * malloc_checked - allocates memory
+ * malloc_checked - allocate
  * @b: param 1
+ * Return: n
  */
 
 void *malloc_checked(unsigned int b)

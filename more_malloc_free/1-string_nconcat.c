@@ -30,10 +30,10 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	s = malloc(sizeof(char) * i + n + 1);
 	if (s == NULL)
 		return (NULL);
-	for (d = 0; d < i; x++)
+	for (d = 0; d < i; d++)
 		s[d] = s1[d];
-	for (y = 0; y < n; d++, y++)
-		s[d] = s2[y];
+	for (t = 0; t < n; d++, t++)
+		s[d] = s2[t];
 	s[d] = '\0';
 	return (s);
 }

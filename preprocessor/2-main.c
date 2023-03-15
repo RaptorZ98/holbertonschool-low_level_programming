@@ -1,7 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
-#define __FILENAME__ ((strrchr(__FILE__, '/') + 1))
 
 /**
  * main - does something
@@ -10,6 +8,6 @@
 
 int main(void)
 {
-	printf("%s\n", __FILENAME__);
+	printf("%s\n", __FILE__);
 	return (0);
 }

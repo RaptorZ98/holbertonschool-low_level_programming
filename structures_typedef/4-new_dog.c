@@ -13,8 +13,6 @@
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newd;
-	char *cname;
-	char *cowner;
 
 	newd = malloc(sizeof(dog_t));
 	if (newd == NULL)
@@ -48,11 +46,11 @@ char *copy(char *cp)
 	char *copy;
 
 	i = 0;
-	while (cp[i] != '\0')
-		i++;
-	copy = malloc(sizeof(char) * (i + 1));
+	while (cp[n] != '\0')
+		n++;
+	copy = malloc(sizeof(char) * (n + 1));
 	if (copy != NULL)
-		for (j = 0; j < (i + 1); j++)
-			copy[j] = cp[j];
+		for (d = 0; d < (n + 1); d++)
+			copy[d] = cp[d];
 	return (copy);
 }

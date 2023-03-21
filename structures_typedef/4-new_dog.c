@@ -55,6 +55,8 @@ char *copy(char *cp)
 	int n, d;
 	char *copy;
 
+	if (cp == NULL)
+		return (NULL);
 	n = 0;
 	while (cp[n] != '\0')
 		n++;

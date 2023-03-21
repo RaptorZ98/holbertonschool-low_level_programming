@@ -45,7 +45,7 @@ char *copy(char *cp)
 	int n, d;
 	char *copy;
 
-	i = 0;
+	n = 0;
 	while (cp[n] != '\0')
 		n++;
 	copy = malloc(sizeof(char) * (n + 1));

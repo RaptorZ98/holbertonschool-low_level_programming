@@ -22,6 +22,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 		newd->name = copy(name);
 		if (name == NULL)
 		{
+			free(newd->name);
+			free(newd->age);
+			free(newd->owner);
 			free(newd);
 			return (NULL);
 		}
@@ -33,12 +36,21 @@ dog_t *new_dog(char *name, float age, char *owner)
 		newd->owner = copy(owner);
 		if (owner == NULL)
 		{
+			free(newd->name);
+			free(newd->age);
+			free(newd->owner);
 			free(newd);
-			return(NULL);
+			return (NULL);
 		}
 	}
 	return (newd);
 }
+
+/**
+ * copy - --
+ * @cp: --
+ * Return: --
+ */
 
 char *copy(char *cp)
 {

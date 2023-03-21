@@ -20,7 +20,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (name != NULL)
 	{
 		newd->name = copy(name);
-		if (name == NULL)
+		if (newd->name == NULL)
 		{
 			free(newd->name);
 			free(newd->owner);
@@ -32,7 +32,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (owner != NULL)
 	{
 		newd->owner = copy(owner);
-		if (owner == NULL)
+		if (newd->owner == NULL)
 		{
 			free(newd->name);
 			free(newd->owner);

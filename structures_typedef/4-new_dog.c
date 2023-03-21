@@ -60,8 +60,9 @@ char *copy(char *cp)
 	while (cp[n] != '\0')
 		n++;
 	copy = malloc(sizeof(char) * (n + 1));
-	if (copy != NULL)
-		for (d = 0; d < (n + 1); d++)
-			copy[d] = cp[d];
+	if (copy == NULL)
+		return (NULL);
+	for (d = 0; d < (n + 1); d++)
+		copy[d] = cp[d];
 	return (copy);
 }

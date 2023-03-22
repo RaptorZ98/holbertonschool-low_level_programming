@@ -13,15 +13,15 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int n;
-	void (*f)(int, int);
+	int (*f)(int, int);
 
 	if (argc != 4)
 		exit(98);
 
 	i = atoi(argv[1]);
-	n = atoi(argv[4]);
+	n = atoi(argv[3]);
 
-	if ((argv[3] == '/' || argv[3] == '%') && n == 0)
+	if ((argv[2] == '/' || argv[2] == '%') && n == 0)
 		exit(100);
 
 	f = get_op_func(argv[2]);

@@ -33,4 +33,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			s = "(nil)";
 		printf("%s\n", s);
 	}
+	else
+		printf("\n");
 }

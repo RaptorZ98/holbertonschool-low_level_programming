@@ -22,6 +22,8 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 			printf("%u\n", x);
 		else if (separator != NULL)
 			printf("%d%s", x, separator);
+		else if (separator == NULL && i == n - 1)
+			printf("%d\n", x);
 		else if (separator == NULL)
 			printf("%d", x);
 	}

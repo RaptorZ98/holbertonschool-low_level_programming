@@ -4,9 +4,9 @@
 #include <stdarg.h>
 
 /**
- *
- *
- *
+ * print_strings - print strings
+ * @separator: param 1
+ * @n: param 2
  */
 
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -18,7 +18,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	va_start(ap, n);
 	for(i = 0; i < n - 1; i++)
 	{
-		s = va_arg(ap, char *)
+		s = va_arg(ap, char *);
 		if (s == NULL)
 			s = "(nil)";
 		if (separator != NULL)
@@ -26,7 +26,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		else
 			printf("%s", s);
 	}
-	s = va_arg(ap, char *)
+	s = va_arg(ap, char *);
 	if (s == NULL)
 		s = "(nil)";
 	printf("%s\n", s);

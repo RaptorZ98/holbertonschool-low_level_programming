@@ -6,6 +6,7 @@
 /**
  * printc - print
  * @l: param 1
+ * Return: int
  */
 
 int printc(va_list l)
@@ -17,6 +18,7 @@ int printc(va_list l)
 /**
  * printi - print
  * @l: param 1
+ * Return: int
  */
 
 int printi(va_list l)
@@ -28,6 +30,7 @@ int printi(va_list l)
 /**
  * printff - prints
  * @l: param 1
+ * Return: int
  */
 
 int printff(va_list l)
@@ -39,6 +42,7 @@ int printff(va_list l)
 /**
  * prints - prints
  * @l: param 1
+ * Return: int
  */
 
 int prints(va_list l)
@@ -58,6 +62,7 @@ int prints(va_list l)
 /**
  * print_all - prints
  * @fomrat: param 1
+ * Return: int
  */
 
 void print_all(const char * const format, ...)

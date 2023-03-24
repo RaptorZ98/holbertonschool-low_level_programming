@@ -10,7 +10,7 @@
 
 int printc(va_list l)
 {
-	printf("%c", va_arg(l, char));
+	printf("%c", va_arg(l, int));
 	return (0);
 }
 
@@ -32,7 +32,7 @@ int printi(va_list l)
 
 int printff(va_list l)
 {
-	printf("%f", va_arg(l, float));
+	printf("%f", va_arg(l, double));
 	return (0);
 }
 
@@ -81,7 +81,7 @@ void print_all(const char * const format, ...)
 		m = 0;
 		while (ls[m].f != NULL)
 		{
-			if (format[n] == *(ops[m].op))
+			if (format[n] == *(ls[m].op))
 			{
 				printf("%s", st1);
 				ls[m].f(ap);

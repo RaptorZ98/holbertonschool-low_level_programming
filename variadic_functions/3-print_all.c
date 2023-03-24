@@ -53,7 +53,7 @@ int prints(va_list l)
 	if (t == NULL)
 	{
 		printf("(nil)");
-		return(0);
+		return (0);
 	}
 	printf("%s", t);
 	return (0);
@@ -61,7 +61,7 @@ int prints(va_list l)
 
 /**
  * print_all - prints
- * @fomrat: param 1
+ * @format: param 1
  * Return: int
  */
 

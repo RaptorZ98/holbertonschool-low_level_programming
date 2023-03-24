@@ -8,9 +8,10 @@
  * @l: param 1
  */
 
-void printc(va_list l)
+int printc(va_list l)
 {
 	printf("%c", va_arg(l, char));
+	return (0);
 }
 
 /**
@@ -18,9 +19,10 @@ void printc(va_list l)
  * @l: param 1
  */
 
-void printi(va_list l)
+int printi(va_list l)
 {
 	printf("%d", va_arg(l, int));
+	return (0);
 }
 
 /**
@@ -28,9 +30,10 @@ void printi(va_list l)
  * @l: param 1
  */
 
-void printff(va_list l)
+int printff(va_list l)
 {
 	printf("%f", va_arg(l, float));
+	return (0);
 }
 
 /**
@@ -38,7 +41,7 @@ void printff(va_list l)
  * @l: param 1
  */
 
-void prints(va_list l)
+int prints(va_list l)
 {
 	char *t;
 
@@ -46,9 +49,10 @@ void prints(va_list l)
 	if (t == NULL)
 	{
 		printf("(nil)");
-		exit(1);
+		return(0);
 	}
-	printf("%s", s);
+	printf("%s", t);
+	return (0);
 }
 
 /**

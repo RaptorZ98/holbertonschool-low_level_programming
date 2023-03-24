@@ -5,10 +5,10 @@ int sum_them_all(const unsigned int n, ...);
 void print_numbers(const char *separator, const unsigned int n, ...);
 void print_strings(const char *separator, const unsigned int n, ...);
 void print_all(const char * const format, ...);
-void printc(va_list a);
-void printi(va_list a);
-void printff(va_list a);
-void prints(va_list a);
+int printc(va_list a);
+int printi(va_list a);
+int printff(va_list a);
+int prints(va_list a);
 
 /**
  * struct les - Struct les

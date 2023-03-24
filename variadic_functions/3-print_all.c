@@ -90,10 +90,10 @@ void print_all(const char * const format, ...)
 			{
 				printf("%s", st1);
 				ls[m].f(ap);
+				st1 = st2;
 			}
 			m++;
 		}
-		st1 = st2;
 		n++;
 	}
 	printf("\n");

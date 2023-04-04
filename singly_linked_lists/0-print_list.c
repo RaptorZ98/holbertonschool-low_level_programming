@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * print_list - prints the content of all the nodes
+ * @h: the pointer to the next node
+ * Return: the number of nodes
+ */
+
 size_t print_list(const list_t *h)
 {
 	if (h->next != NULL)

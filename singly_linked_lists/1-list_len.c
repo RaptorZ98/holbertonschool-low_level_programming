@@ -8,12 +8,7 @@
 
 size_t list_len(const list_t *h)
 {
-	int pos;
-	size_t result = 0;
-
-	for (pos = 0; h[0] != NULL; pos++)
-	{
-		result++
-	}
-	return (result);
+	if (h->next == NULL)
+		return (1);
+	return (1 + list_len(h->next));
 }

@@ -14,32 +14,27 @@ list_t *add_node_end(list_t **head, const char *str)
 	list_t *new;
 	char *strCopy = strdup(str);
 
-	if (head == NULL)
+	if (head == NULL || strCopy == NULL)
 		return (NULL);
-	if (strCopy == NULL)
-		return (NULL);
+
 	while (strCopy[length] != '\0')
 		length++;
+
 	new = malloc(sizeof(list_t));
 	if (new == NULL)
 		return (NULL);
-	tail = get_the_node(*head);
-	tail->next = new;
+
+	tail = *head;
+	if (tail->next != NULL)
+	{
+		while (tail->next != NULL)
+			tail = tail->next;
+		tail->next = new;
+	}
+	else
+		*head = new;
 	new->str = strCopy;
 	new->len = length;
 	new->next = NULL;
 	return (new);
-}
-
-/**
- * get_the_node - gets the last node
- * @head: the first node of the list
- * Return: the adress of the last node
- */
-
-list_t *get_the_node(list_t *head)
-{
-	if (head->next == NULL)
-		return (head);
-	return (get_the_node(head->next));
 }

@@ -28,7 +28,6 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		auxPrev = aux->prev;
 		auxPrev->next = aux->next;
 	}
-	free(aux);
 	return (1);
 }
 

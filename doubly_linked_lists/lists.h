@@ -44,4 +44,6 @@ dlistint_t *get_node_index(dlistint_t *head, unsigned int index);
 
 size_t list_length(const dlistint_t *h);
 
+dlistint_t *get_node_index1(dlistint_t *head, unsigned int index);
+
 #endif

@@ -51,7 +51,7 @@ size_t list_length(const dlistint_t *h)
 		return (0);
 	if (h->next == NULL)
 		return (1);
-	return (1 + dlistint_len(h->next));
+	return (1 + list_length(h->next));
 }
 
 /**

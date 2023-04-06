@@ -7,7 +7,7 @@
 
 void free_dlistint(dlistint_t *head)
 {
-	if (head->next = NULL)
+	if (head->next == NULL)
 	{
 		free(head);
 	}

@@ -20,11 +20,12 @@ int delete_dnodeint_at_index(dlistint_t **head, unsigned int index)
 		(aux->next)->prev = aux->prev;
 	if (aux->prev != NULL)
 		(aux->prev)->next = aux->next;
+	free(aux);
 	return (1);
 }
 
 /**
- * get_node_index - returns the nth node of a linked list
+ * get_node_index1 - returns the nth node of a linked list
  * @head: the head of the list
  * @index: the index of the node
  * Return: the node of the index

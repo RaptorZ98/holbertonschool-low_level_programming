@@ -19,13 +19,13 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		return (NULL);
 	if (*h == NULL || idx == 0)
 		return (add_dnodeint(h, n));
-	len = dlistint_len(*h);
+	len = list_lenght(*h);
 	if (len + 1 > idx)
 		return (NULL);
 	else if (len + 1 == idx)
 		return (add_dnodeint_end(h, n));
 
-	aux = get_dnodeint_at_index(*h, idx);
+	aux = get_node_index(*h, idx);
 	temp = aux->prev;
 
 	new = malloc(sizeof(dlistint_t));
@@ -37,4 +37,44 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	temp->next = new;
 	aux->prev = new;
 	return (new);
+}
+
+/**
+ * list_length - calculates the length of a list
+ * @h: the head of the list
+ * Return: the size of the list
+ */
+
+size_t list_length(const dlistint_t *h)
+{
+	if (h == NULL)
+		return (0);
+	if (h->next == NULL)
+		return (1);
+	return (1 + dlistint_len(h->next));
+}
+
+/**
+ * get_node_index - returns the nth node of a linked list
+ * @head: the head of the list
+ * @index: the index of the node
+ * Return: the node of the index
+ */
+
+dlistint_t *get_node_index(dlistint_t *head, unsigned int index)
+{
+	unsigned int pos = 0;
+	dlistint_t *aux;
+
+	if (head == NULL)
+		return (NULL);
+	aux = head;
+	while (pos < index && aux->next != NULL)
+	{
+		aux = aux->next;
+		pos++;
+	}
+	if (pos != index)
+		return (NULL);
+	return (aux);
 }

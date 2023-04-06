@@ -20,7 +20,9 @@ dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
 		aux = aux->next;
 		pos++;
 	}
-	if (pos - 1 != index)
+	if (pos != 0)
+		pos--;
+	if (pos != index)
 		return (NULL);
 	return (aux);
 }

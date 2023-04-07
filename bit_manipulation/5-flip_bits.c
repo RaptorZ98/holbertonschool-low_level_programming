@@ -18,6 +18,9 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		if (((n & num) != 0) && ((m & num) != 0))
 		{
 		}
+		else if (((n & num) == 0) && ((m & num) == 0))
+		{
+		}
 		else
 			result++;
 		num >>= 1;

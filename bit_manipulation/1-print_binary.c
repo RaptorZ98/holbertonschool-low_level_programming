@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 	int check = 0, i;
 	unsigned long int mask;
 
-	mask = (1 << 63);
+	mask = (1 << 62);
 	if (n == 0)
 	{
 		_putchar('0');

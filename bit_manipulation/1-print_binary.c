@@ -7,7 +7,8 @@
 
 void print_binary(unsigned long int n)
 {
-	int check = 0, mask, i;
+	int check = 0, i;
+	unsigned int mask;
 
 	mask = 2147483648;
 	if (n == 0)

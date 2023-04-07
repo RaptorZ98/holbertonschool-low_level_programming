@@ -13,7 +13,7 @@ void print_binary(unsigned long int n)
 	mask = 2147483648;
 	if (n == 0)
 		_putchar('0');
-	for (i = 0; i <= 32; i++)
+	for (i = 0; i <= 33; i++)
 	{
 		if ((n & mask) != 0)
 		{

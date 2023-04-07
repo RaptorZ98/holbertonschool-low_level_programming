@@ -1,4 +1,5 @@
 #include "main.h"
+#include <limits.h>
 
 /**
  * print_binary - prints a number in binary
@@ -10,13 +11,13 @@ void print_binary(unsigned long int n)
 	int check = 0, i;
 	unsigned long int mask;
 
-	mask = 2147483648;
+	mask = 4611686018427387904;
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	for (i = 0; i <= 31; i++)
+	for (i = 0; i <= 62; i++)
 	{
 		if ((n & mask) != 0)
 		{

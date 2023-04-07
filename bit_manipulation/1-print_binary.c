@@ -10,13 +10,13 @@ void print_binary(unsigned long int n)
 	int check = 0, i;
 	unsigned long int mask;
 
-	mask = 2147483648;
+	mask = 9223372036854775808;
 	if (n == 0)
 	{
 		_putchar('0');
 		return;
 	}
-	for (i = 0; i <= 33; i++)
+	for (i = 0; i <= 64; i++)
 	{
 		if ((n & mask) != 0)
 		{

@@ -9,7 +9,7 @@
 void print_binary(unsigned long int n)
 {
 	int check = 0, i;
-	unsigned long long int mask;
+	unsigned long int mask;
 
 	mask = 4611686018427387904;
 	if (n == 0)

@@ -9,7 +9,7 @@ void print_binary(unsigned long int n)
 {
 	int check = 0, mask, i;
 
-	mask = 0b10000000000000000000000000000000;
+	mask = 2147483648;
 	if (n == 0)
 		_putchar('0');
 	for (i = 0; i <= 32; i++)

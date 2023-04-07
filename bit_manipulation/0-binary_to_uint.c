@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * binart_to_uint - converts a binart number to an unsigned int
+ * binary_to_uint - converts a binart number to an unsigned int
  * @b: the binary number
  * Return: the converted number
  */
@@ -36,7 +36,7 @@ unsigned int binary_to_uint(const char *b)
 
 unsigned int power_of(unsigned int n)
 {
-	if (n = 0)
+	if (n == 0)
 		return (1);
 	return (2 * power_of(n - 1));
 }

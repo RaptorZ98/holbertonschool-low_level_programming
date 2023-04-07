@@ -12,7 +12,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 	unsigned long int num = 1;
 	int result = 0, lup;
 
-	num << 62;
+	num <<= 62;
 	for (lup = 0; lup <= 62; lup++)
 	{
 		if (((n & num) != 0) && ((m & num) != 0))
@@ -20,7 +20,7 @@ unsigned int flip_bits(unsigned long int n, unsigned long int m)
 		}
 		else
 			result++;
-		num >> 1;
+		num >>= 1;
 	}
 	return (result);
 }

@@ -1,1 +1,1 @@
-readme.md
+It this directory Bit manipulation is worked.

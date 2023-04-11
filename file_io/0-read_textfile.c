@@ -33,7 +33,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	printed = write(POSIX, buff, wordsR);
+	printed = write(STDOUT_FILENO, buff, wordsR);
 	if (printed != wordsR)
 	{
 		close(file);

@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * appends_text_to_file - appends text at the end of a file
+ * append_text_to_file - appends text at the end of a file
  * @filename: the name of the file
  * @text_content: the content to append to the file
  * Return: 1 on succes and -1 on failure

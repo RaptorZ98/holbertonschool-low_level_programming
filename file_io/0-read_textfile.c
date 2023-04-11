@@ -30,6 +30,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	}
 
 	printed = write(1, buff, wordsR);
+	close(file);
 	free(buff);
 	return (printed);
 }

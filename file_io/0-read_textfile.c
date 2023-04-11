@@ -10,7 +10,8 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *buff;
-	int wordsR, file, printed;
+	int wordsR, file;
+	size_t printed;
 
 	if (filename == NULL)
 		return (0);
@@ -20,16 +21,26 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	buff = malloc(sizeof(char) * letters);
 	if (buff == NULL)
+	{
+		close(file);
 		return (0);
+	}
 
 	wordsR = read(file, buff, letters);
 	if (wordsR == -1)
 	{
 		free(buff);
+		close(file);
 		return (0);
 	}
 
 	printed = write(1, buff, wordsR);
+	if (printed != letters)
+	{
+		close(file);
+		free(buff);
+		return (0);
+	}
 	close(file);
 	free(buff);
 	return (printed);

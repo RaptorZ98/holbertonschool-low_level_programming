@@ -4,7 +4,7 @@
  * main - copies the content of a file to another file
  * @argc: the
  * @argv: the
- * Return:
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
@@ -13,36 +13,32 @@ int main(int argc, char *argv[])
 	char buff[1024];
 
 	if (argc != 3)
-	{
-		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to");
-		exit(97);
-	}
+		dprintf(STDERR_FILENO, "%s\n", "Usage: cp file_from file_to"), exit(97);
 	if (argv[1] != NULL)
 		fileFrom = open(argv[1], O_RDONLY);
-	if (file < 0)
+	if (fileFrom < 0)
 	{
-		dprintf(STDERR_FILENO, "%s%s\n", "Error: Can't read from file ", argv[1]);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 		exit(98);
 	}
-	fileTo = open(argv[2], O_RDWR | O_CREAT | O_TRUNC, 00664);
+	fileTo = open(argv[2], O_RDONLY | O_CREAT | O_TRUNC, 00664);
 	if (fileTo < 0)
-	{
-		dprintf(STDERR_FILENO, "%s%s\n", "Error: Can't write to ", argv[2]);
-		exit(99);
-	}
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	while (readLen != 0)
 	{
 		readLen = read(fileFrom, buff, 1024);
-		if (readLen > 0)
+		if (readLen < 0)
 		{
-			writeLen = write(fileTo, buff, readLen);
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
+			exit(98);
 		}
-		if (readLen < 0 || writeLen < 0)
-		{
-			
-		}
+		writeLen = write(fileTo, buff, readLen);
+		if (writeLen < 0)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]), exit(99);
 	}
-	close(fileFrom);
-	close(fileTo);
+	if (close(fileFrom) < 0)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileFrom), exit(100);
+	if (close(fileTo) < 0)
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fileTo), exit(100);
 	return (0);
 }

@@ -1,7 +1,7 @@
 #include "hash_tables.h"
 
 /**
- * key_index - gives the index at wich the key value pair should be stored in the array
+ * key_index - gives the index at wich the key should be stored in the array
  * @key: the key
  * @size: the size of the array
  * Return: the index

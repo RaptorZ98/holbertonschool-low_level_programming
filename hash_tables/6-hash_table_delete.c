@@ -15,15 +15,25 @@ void hash_table_delete(hash_table_t *ht)
 
 	for (pos = 0; pos < ht->size; pos++)
 	{
-		while (ht->array[pos] != NULL)
-		{
-			tmp = ht->array[pos]->next;
-			free(ht->array[pos]->value);
-			free(ht->array[pos]->key);
-			free(ht->array[pos]);
-			ht->array[pos] = tmp;
-		}
+		free_hash_list(ht->array[pos]);
 	}
 	free(ht->array);
 	free(ht);
+}
+
+
+/**
+ * free_hash_list - frees a list in a hash
+ * @node: the node that starts the list
+ */
+
+void free_hash_list(hash_node_t *node)
+{
+	if (node != NULL)
+	{
+		free_hash_list(node->next);
+		free(node->value);
+		free(node->key)
+		free(node);
+	}
 }

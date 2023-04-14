@@ -50,4 +50,6 @@ void hash_table_print(const hash_table_t *ht);
 
 void hash_table_delete(hash_table_t *ht);
 
+void free_hash_list(hash_node_t *node);
+
 #endif

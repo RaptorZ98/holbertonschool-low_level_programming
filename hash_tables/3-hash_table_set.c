@@ -44,8 +44,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		free(newHash->value);
 		free(newHash);
 	}
-	newHash->value = strdup(value);
-	newHash->key = strdup(key);
+	strcpy(newHash->value, value);
+	strcpy(newHash->key, key);
 	ht->array[indexKey] = newHash;
 	return (1);
 }

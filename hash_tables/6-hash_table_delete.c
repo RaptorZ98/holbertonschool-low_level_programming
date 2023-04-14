@@ -33,7 +33,7 @@ void free_hash_list(hash_node_t *node)
 	{
 		free_hash_list(node->next);
 		free(node->value);
-		free(node->key)
+		free(node->key);
 		free(node);
 	}
 }

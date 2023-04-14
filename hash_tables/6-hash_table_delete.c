@@ -31,8 +31,8 @@ void free_hash_list(hash_node_t *node)
 	if (node != NULL)
 	{
 		free_hash_list(node->next);
-		free(node->value);
 		free(node->key);
+		free(node->value);
 		free(node);
 	}
 }

@@ -18,14 +18,11 @@ char *hash_table_get(const hash_table_t *ht, const char *key)
 	index = key_index((unsigned char *) key, ht->size);
 	node = ht->array[index];
 
-	if (node == NULL)
-		return (NULL);
-
-	while (node->next != NULL && strcmp(node->key, key) != 0)
+	while (node != NULL && strcmp(node->key, key) != 0)
 	{
 		node = node->next;
 	}
-	if (node->next == NULL)
+	if (node == NULL)
 		return (NULL);
 	else
 		return (node->value);

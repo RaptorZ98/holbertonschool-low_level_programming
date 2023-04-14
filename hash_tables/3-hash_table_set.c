@@ -11,32 +11,35 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int indexKey;
-	hash_node_t *tmp, *newHash;
-	char *copyValue;
+	hash_node_t *newHash;
 
-	strcpy(copyValue, value);
 	if (ht == NULL || key == NULL)
 		return (0);
 	if (strcmp("", key) == 0)
 		return (0);
 
-	indexKey = key_index(key, ht->size);
-
-	if (strcmp("", ht[indexKey]->key) == 0)
+	indexKey = key_index((unsigned const char *) key, ht->size);
+	if (ht->array[indexKey] == NULL)
 	{
-		ht[indexKey]->value = copyValue;
-		ht[indexKey]->key = key;
-	}
-	else
-	{
-		*tmp = ht->array;
 		newHash = malloc(sizeof(hash_node_t));
 		if (newHash == NULL)
 			return (0);
-		newHash->next = tmp;
-		tmp = newHash;
-		newHash->value = copyValue;
-		newHash->key = key;
+		ht->array[indexKey] = newHash;
 	}
-	return (0);
+	else if (strcmp(ht->array[indexKey]->key, strdup(key)))
+	{
+		ht->array[indexKey]->value = strdup(value);
+		return (1);
+	}
+	else
+	{
+		newHash = malloc(sizeof(hash_node_t));
+		if (newHash == NULL)
+			return (0);
+		newHash->next = ht->array[indexKey];
+		ht->array[indexKey] = newHash;
+	}
+	newHash->value = strdup(value);
+	newHash->key = strdup(value);
+	return (1);
 }

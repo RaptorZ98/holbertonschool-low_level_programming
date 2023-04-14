@@ -24,7 +24,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 	else
 	{
 		for (pos = 0; pos < size; pos++)
-			table-array[pos] = NULL;
+			table->array[pos] = NULL;
 	}
 
 	table->size = size;

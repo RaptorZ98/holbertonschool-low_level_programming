@@ -10,6 +10,7 @@ hash_table_t *hash_table_create(unsigned long int size)
 {
 	hash_table_t *table;
 	hash_node_t *arr;
+	int pos;
 
 	table = malloc(sizeof(hash_table_t));
 	if (table == NULL)
@@ -19,6 +20,11 @@ hash_table_t *hash_table_create(unsigned long int size)
 	{
 		free(table);
 		return (NULL);
+	}
+	else
+	{
+		for (pos = 0; pos < size; pos++)
+			ht-array[pos] = NULL;
 	}
 
 	table->size = size;

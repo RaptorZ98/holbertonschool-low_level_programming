@@ -20,8 +20,8 @@ int binary_search(int *array, size_t size, int value)
 		print_array(aux, len);
 		res = (left + right) / 2;
 		len /= 2;
-		if (len % 2 != 0 && len != 1)
-			len--;
+		//if (len % 2 != 0 && len != 1)
+		//	len--;
 		if (array[res] < value)
 		{
 			left = res + 1;
@@ -30,7 +30,8 @@ int binary_search(int *array, size_t size, int value)
 		else if (array[res] > value)
 		{
 			right = res - 1;
-			aux = &array[res - len];
+			aux = &array[res - len + 1];
+			len--;
 		}
 		else
 		{

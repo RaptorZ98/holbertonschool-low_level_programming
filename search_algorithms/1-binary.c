@@ -48,7 +48,7 @@ int binary_search(int *array, size_t size, int value)
  */
 void print_array(const int *array, int size)
 {
-	size_t i;
+	int i;
 
 	i = 0;
 	printf("Searching in array: ");
